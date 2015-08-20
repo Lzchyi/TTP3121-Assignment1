@@ -9,7 +9,7 @@ Lecturer: Dr. Anang
 
 Tasks
 
-This assignment is mainly to get the idea about the "ifconfig". Then, this program requests to retrieve the local IP address (eth0) only. Therefore, after showing the content of ifconfig, the output has to be splited out in order to sort out the IP address.
+This assignment is mainly to get the idea about the "ifconfig". Then, this program requests to retrieve the local IP address (eth0) only. Therefore, after showing the content of ifconfig, the outputs has to be splited out in order to sort out the IP address.
 
 
 Work Distribution
