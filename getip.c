@@ -18,10 +18,10 @@ int main()
 		{			
 			strcpy(x[i], token);
 			i++;
-    			token = strtok(NULL," ");	
-		}		      
+    			token = strtok(NULL," ");
+		}	      
 	}
 
-	printf("Your local IP %s\n", x[7]);
+	printf("Your local IP %s (eth0)\n", x[7]);
 	pclose(fp);
 }
