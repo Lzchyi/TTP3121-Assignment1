@@ -9,7 +9,7 @@ Lecturer: Dr. Anang
 
 Tasks
 
-This assignment is mainly to get the idea about the "ifconfig". Then, this program requests to retrieve the local IP address (eth0) only. Therefore, after showing the content of ifconfig, the outputs has to be splited out in order to sort out the IP address.
+This assignment is mainly to understand the "ifconfig" command in c program. Thus, this program requests to retrieve the local IP address (eth0) only. Therefore, after storing (copying) the concept of ifconfig inside, the outputs have been splited out by lines in order to sort out the IP address. The final output should be local IP address (eth0) only.
 
 
 Work Distribution
@@ -23,5 +23,6 @@ Pang
 
 Lee
 - Do research
-- Test the program
+- Run the program
 - Create Github account
+- Check README file
