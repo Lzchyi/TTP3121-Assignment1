@@ -1,2 +1,5 @@
 # TTP3121-Assignment1
-TTP3121 TCP/IP Programming Assignment1
+
+Pang Yu Hau 1112703577
+Lee Zhen Chyi 1112703477
+
