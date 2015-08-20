@@ -1,34 +1,27 @@
-#include <stdio.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <sys/ioctl.h>
-#include <netinet/in.h>
-#include <net/if.h>
-#include <unistd.h>
-#include <arpa/inet.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 
 int main()
 {
-	int fd;
-	struct ifreq ifr;
+	FILE* fp;
+	char returnData[64];
+	fp = popen("/sbin/ifconfig eth0", "r");
+	char x[50][50];
+	int i = 0;
 	
-	char iface[] = "eth0";
-	
-	fd = socket(AF_INET, SOCK_DGRAM, 0);
+	while (fgets(returnData, 64, fp) != NULL)
+	{
+		char* token = strtok(returnData, " ");
+		
+		while(token != NULL)
+		{			
+			strcpy(x[i], token);
+			i++;
+    			token = strtok(NULL," ");	
+		}		      
+	}
 
-	//Type of address to retrieve - IPv4 IP address
-	ifr.ifr_addr.sa_family = AF_INET;
-
-	//Copy the interface name in the ifreq structure
-	strncpy(ifr.ifr_name , iface , IFNAMSIZ-1);
-
-	ioctl(fd, SIOCGIFADDR, &ifr);
-
-	close(fd);
-
-	//display result
-	printf("%s - %s\n" , iface , inet_ntoa(( (struct sockaddr_in *)&ifr.ifr_addr )->sin_addr) );
-
-	return 0;
+	printf("Your local IP %s\n", x[7]);
+	pclose(fp);
 }
